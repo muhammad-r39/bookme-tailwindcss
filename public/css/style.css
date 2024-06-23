@@ -2570,6 +2570,10 @@ video {
     padding-top: 29px;
   }
 
+  .xs\:pb-px {
+    padding-bottom: 1px;
+  }
+
   .xs\:text-\[22px\] {
     font-size: 22px;
   }
