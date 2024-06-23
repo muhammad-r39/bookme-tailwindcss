@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'SF-Pro-Display';
+        font-weight: 300;
+        font-style: normal;
+        src: url(/public/fonts/SF-Pro-Display-Light.ttf);
+    }
+    @font-face {
+        font-family: 'SF-Pro-Display';
+        font-weight: 400;
+        font-style: normal;
+        src: url(/public/fonts/SF-Pro-Display-Regular.ttf);
+    }
+    @font-face {
+        font-family: 'SF-Pro-Display';
+        font-weight: 500;
+        font-style: normal;
+        src: url(/public/fonts/SF-Pro-Display-Medium.otf);
+    }
+    @font-face {
+        font-family: 'SF-Pro-Display';
+        font-weight: 600;
+        font-style: normal;
+        src: url(/public/fonts/SF-Pro-Display-SemiBold.ttf);
+    }
+    @font-face {
+        font-family: 'SF-Pro-Display';
+        font-weight: 700;
+        font-style: normal;
+        src: url(/public/fonts/SF-Pro-Display-Bold.ttf);
+    }
+}
+
+@layer base {
+    ::-webkit-scrollbar {
+        @apply w-1 opacity-50 -ms-4;
+    }
+    
+    ::-webkit-scrollbar-track {
+        @apply bg-primary-black;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        @apply bg-golden rounded;
+    }
+}
+
+@layer components {
+    .transition-all-3ms {
+        @apply transition-all duration-300 ease-in-out;
+    }
+
+    .transition-all-5ms {
+        @apply transition-all duration-500 ease-in-out;
+    }
+
+    .transition-all-full {
+        @apply transition-all duration-1000 ease-in-out;
+    }
+
+    .menu a {
+        @apply hover:text-golden hover:drop-shadow-[1px_2px_2px_rgba(255,255,255,1)] px-3 py-2 text-xl font-medium tracking-[0.1px] transition-all-5ms;
+    }
+
+    .header-wavy-edge .menu {
+        @apply relative bg-[#DADBDC] flex items-center gap-[8px] 3xl:gap-[32px] 4xl:gap-[62px] px-[10px] 3xl:ps-[41px] 3xl:pe-[42px] pt-6
+        after:absolute after:w-full after:h-full after:left-0 after:bottom-0 after:-z-10 after:drop-shadow-[0_10px_25px_rgba(0,0,0,0.25)] after:bg-inherit;
+    }
+
+    .header-wavy-edge>img {
+        @apply hidden xl:inline-block drop-shadow-[0_20px_15px_rgba(0,0,0,0.1)];
+    }
+
+    .btn-goto {
+        @apply relative flex items-center justify-center gap-[10px] float-right border-2 rounded-[36px] mt-[45px] pt-[13px] pb-[12px] ps-[17px] pe-[13px] text-2xl font-normal tracking-[0.45px] leading-[0.9] text-[#F6F6F6] shadow-[0_4px_4px_rgba(0,0,0,0.2)] hover:text-golden transition-all-5ms;
+    }
+
+    html.menu-open {
+        @apply max-xl:overflow-y-hidden;
+    }
+
+    body.menu-open {
+        @apply max-xl:-translate-x-full;
+    }
+
+    .mobile-menu {
+        @apply fixed top-0 right-0 w-full h-screen bg-primary flex-col-reverse justify-center translate-x-full transition-all-full;
+    }
+
+    .mobile-menu .menu {
+        @apply bg-transparent flex-col text-white;
+    }
+
+    .mobile-menu .menu a {
+        @apply hover:drop-shadow-none;
+    }
+
+    .menu-open .menu-trigger {
+        @apply translate-x-[100%];
+    }
+
+    .menu-icon {
+        @apply w-10 flex flex-col gap-[6px] transition-all-full;
+    }
+
+    .menu-icon span {
+        @apply w-full h-1 rounded-sm bg-white transition-all-full;
+    }
+
+    .menu-open .menu-icon span {
+        @apply first:w-[30px] first:-rotate-45 first:-translate-x-[20px] last:w-[30px] last:rotate-45 last:-translate-x-[20px];
+    }
+
+    .corner {
+        @apply w-[25px] h-[25px] bg-primary-bg;
+        clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 90% 1%, 70% 5%, 47% 13%, 27% 27%, 13% 47%, 5% 70%, 1% 90%, 0% 100%);
+    }
+
+    .side-shadow {
+        box-shadow: 0px 0 5px rgba(0, 0, 0, 1), 0px 0 10px rgba(0, 0, 0, 1), 0px 0 15px rgba(0, 0, 0, 1), 0px 0 20px rgba(0, 0, 0, 1);
+    }
+
+    .input {
+        @apply pt-[22px] pb-[18px] bg-primary text-secondary tracking-[0.1px] placeholder:text-secondary/90 text-[20px] rounded-xl shadow-[inset_0_2px_4px_2px_rgba(0,0,0,0.25)] focus:outline-none;
+    }
+
+    .group-input {
+        @apply flex-col xs:flex-row shadow-[inset_0_2px_4px_2px_rgba(0,0,0,0.25)] bg-primary rounded-xl;
+    }
+
+    .group-input .input {
+        @apply w-full xs:w-1/2 rounded-none first-of-type:rounded-s-xl last-of-type:rounded-e-xl last-of-type:border-t-2 last-of-type:xs:border-t-0 last-of-type:xs:border-s-2 last-of-type:indent-[50px] xs:last-of-type:indent-0 border-primary-bg shadow-none bg-transparent;
+    }
+
+    .hotel-carousel .swiper-slide {
+        @apply text-center transition-all-full;
+    }
+
+    .hotel-carousel .swiper-slide.swiper-slide-prev,
+    .hotel-carousel .swiper-slide.swiper-slide-active,
+    .hotel-carousel .swiper-slide.swiper-slide-next {
+        @apply xl:!w-[19.7%] 4xl:!w-[18.987%];
+    }
+    
+    .hotel-carousel .swiper-slide .slide-inner-container {
+        @apply blur-[1px] transition-all-full;
+        scale: 0.8;
+    }
+
+    .hotel-carousel .swiper-slide.swiper-slide-prev .slide-inner-container,
+    .hotel-carousel .swiper-slide.swiper-slide-active .slide-inner-container,
+    .hotel-carousel .swiper-slide.swiper-slide-next .slide-inner-container {
+        @apply blur-0;
+        scale: 1;
+    }
+
+    .hotel-carousel .swiper-slide.swiper-slide-prev {
+        @apply xl:-ml-[30px];
+    }
+
+    .hotel-carousel .swiper-slide.swiper-slide-next + .swiper-slide {
+        @apply xl:-ml-[30px];
+    }
+    
+    .swiper-button {
+        @apply bg-golden-light hover:bg-golden h-[34px] w-[34px] rounded-full flex items-center justify-center absolute top-[calc(50%+35px)] xs:top-[calc(50%+15px)] lg:top-1/2 xl:top-[calc(50%+15px)] -translate-y-1/2 drop-shadow-[0_3px_2px_rgb(0_0_0/0.3)];
+    }
+
+    .apartments-container .swiper-button {
+        @apply top-[calc(50%+26px)];
+    }
+
+    .swiper-pagination-bullets .swiper-pagination-bullet {
+        @apply bg-secondary rounded-[13px] w-[19px] h-[10px] opacity-100 !delay-100;
+        transition: all .5s ease-in-out !important;
+    }
+
+    .swiper-pagination-bullets .swiper-pagination-bullet-active {
+        @apply bg-primary-bg w-[39px];
+    }
+
+    .gradient-text {
+        @apply inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary-black to-[#6a6a6a];
+    }
+
+    .text-inset-shadow {
+        @apply text-transparent bg-clip-text bg-[#080808]/70;
+        text-shadow: 0px 2px 5px rgba(255, 255, 255, 0.65);
+    }
+
+    .destination {
+        @apply relative rounded-[18px] drop-shadow-[0_5px_2px_rgba(0,0,0,0.5)] overflow-hidden bg-primary;
+    }
+
+    .destination img {
+        @apply w-full opacity-30 transition-all-5ms;
+    }
+
+    .destination:hover img {
+        @apply opacity-40;
+    }
+
+    .destination span {
+        @apply absolute top-0 left-0 flex w-full h-full items-center justify-center text-white text-[28px] xs:text-[35px] font-bold tracking-[0.1px] hover:drop-shadow-[0_0_10px_rgba(0,0,0,0.5)] transition-all-3ms;
+    }
+
+    .bar {
+        @apply relative before:absolute before:top-[2px] before:left-0 before:w-full xl:before:w-[9px] before:h-[9px] xl:before:h-[calc(100%-2px)] before:rounded-full before:bg-[#202226] before:shadow-[inset_-2px_-2px_2px_rgba(78,81,84,0.7),inset_0_4px_4px_rgba(0,0,0,0.75)];
+    }
+
+    .footer-menu {
+        @apply mt-[14px] font-light;
+    }
+
+    .footer-menu li {
+        @apply mb-[24px] leading-none first:text-[17px] last:mb-0 ;
+    }
+    
+    .footer-menu li a {
+        @apply transition-all-3ms hover:text-golden-light text-[15px];
+    }
+}
