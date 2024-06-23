@@ -7,31 +7,31 @@
         font-family: 'SF-Pro-Display';
         font-weight: 300;
         font-style: normal;
-        src: url(/public/fonts/SF-Pro-Display-Light.ttf);
+        src: url(../fonts/SF-Pro-Display-Light.ttf);
     }
     @font-face {
         font-family: 'SF-Pro-Display';
         font-weight: 400;
         font-style: normal;
-        src: url(/public/fonts/SF-Pro-Display-Regular.ttf);
+        src: url(../fonts/SF-Pro-Display-Regular.ttf);
     }
     @font-face {
         font-family: 'SF-Pro-Display';
         font-weight: 500;
         font-style: normal;
-        src: url(/public/fonts/SF-Pro-Display-Medium.otf);
+        src: url(../fonts/SF-Pro-Display-Medium.otf);
     }
     @font-face {
         font-family: 'SF-Pro-Display';
         font-weight: 600;
         font-style: normal;
-        src: url(/public/fonts/SF-Pro-Display-SemiBold.ttf);
+        src: url(../fonts/SF-Pro-Display-SemiBold.ttf);
     }
     @font-face {
         font-family: 'SF-Pro-Display';
         font-weight: 700;
         font-style: normal;
-        src: url(/public/fonts/SF-Pro-Display-Bold.ttf);
+        src: url(../fonts/SF-Pro-Display-Bold.ttf);
     }
 }
 
@@ -133,7 +133,7 @@
     }
 
     .group-input .input {
-        @apply w-full xs:w-1/2 rounded-none first-of-type:rounded-s-xl last-of-type:rounded-e-xl last-of-type:border-t-2 last-of-type:xs:border-t-0 last-of-type:xs:border-s-2 last-of-type:indent-[50px] xs:last-of-type:indent-0 border-primary-bg shadow-none bg-transparent;
+        @apply rounded-none first-of-type:rounded-s-xl last-of-type:rounded-e-xl last-of-type:border-t-2 last-of-type:xs:border-t-0 last-of-type:xs:border-s-2 last-of-type:indent-[50px] xs:last-of-type:indent-0 border-primary-bg shadow-none bg-transparent;
     }
 
     .hotel-carousel .swiper-slide {
