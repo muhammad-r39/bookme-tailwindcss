@@ -2003,11 +2003,6 @@ video {
   font-family: "Manrope", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-\[10px\] {
   font-size: 10px;
 }
@@ -2038,6 +2033,10 @@ video {
 
 .text-\[22px\] {
   font-size: 22px;
+}
+
+.text-\[26px\] {
+  font-size: 26px;
 }
 
 .text-\[28px\] {
@@ -2487,6 +2486,10 @@ video {
     padding-bottom: 10px;
   }
 
+  .\33xs\:pb-\[11px\] {
+    padding-bottom: 11px;
+  }
+
   .\33xs\:text-\[50px\] {
     font-size: 50px;
   }
@@ -2558,20 +2561,16 @@ video {
     padding-bottom: 0px;
   }
 
-  .xs\:pb-0 {
-    padding-bottom: 0px;
-  }
-
   .xs\:pb-\[20px\] {
     padding-bottom: 20px;
   }
 
-  .xs\:pt-\[29px\] {
-    padding-top: 29px;
-  }
-
   .xs\:pb-px {
     padding-bottom: 1px;
+  }
+
+  .xs\:pt-\[29px\] {
+    padding-top: 29px;
   }
 
   .xs\:text-\[22px\] {
@@ -2689,6 +2688,11 @@ video {
 
   .md\:pb-\[60px\] {
     padding-bottom: 60px;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .md\:text-\[65px\] {
