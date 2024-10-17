@@ -1,313 +1,691 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth w-[calc(100%+4px)] overflow-x-hidden">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bookme | TailwindCSS</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
     <script src="js/swiper.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="img/favicon.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-</head>
-<body class="transition-all-full">
+    <link rel="icon" type="image/x-icon" href="img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="transition-all-full">
     <!-- Figma Design Version Date: 6/16/2024 -->
-    <header class="bg-[url('../img/hero-bg.jpeg')] xl:h-[calc(100lvh+70px)] max-md:bg-cover max-md:bg-center flex flex-col relative">
-        <div class="w-full h-full absolute left-0 top-0 z-0 bg-gradient-to-b from-[#3A3A3A] to-primary-black opacity-65"></div>
-        <nav class="w-full z-20 relative">
-            <div class="container flex items-center max-xl:pt-[25px]">
-                <div class="basis-1/6 text-white drop-shadow-[0_4px_2px_rgba(0,0,0,0.35)] xl:mt-[34px] tracking-wider">
-                    <span role="button"><span class="text-[40px] font-normal tracking-[0.1px]">Bookme</span><span class="text-[40px]">.</span><span class="text-[19px] font-light">com</span></span>
-                </div>
-                <div class="basis-5/6 max-xl:mobile-menu flex">
-                    <div class="basis-4/5 max-xl:basis-0 flex items-stretch justify-center header-wavy-edge">
-                        <img src="img/wave-top.svg" alt="wave">
-                        <div class="menu">
-                            <a href="javascript:void(0)" title="List your property">List your property</a>
-                            <a href="javascript:void(0)" title="Support">Support</a>
-                            <a href="javascript:void(0)" title="Trips">Trips</a>
-                            <a href="javascript:void(0)" title="Sign in">Sign in</a>
-                        </div>
-                        <img class="-scale-x-100 -z-10" src="img/wave-top.svg" alt="wave">
-                    </div>
-                    <div class="basis-1/5 max-xl:basis-0 max-xl:text-center">
-                        <a class="group btn-goto max-xl:float-none max-xl:inline-flex" href="https://www.upwork.com/freelancers/muhammadrussell" target="_blank" title="Go to Upwork Profile">
-                            Get the app
-                            <img src="img/download.svg" alt="Download Icon">
-                            <img class="absolute right-[13px] opacity-0 group-hover:opacity-100 transition-all-5ms" src="img/download-golden.svg" alt="Download Icon">
-                        </a>
-                    </div>
-                </div>
-                <div class="basis-5/6 hidden max-xl:flex justify-end container absolute left-0 right-0 z-20 transition-all-full mr-0 menu-trigger">
-                    <div class="menu-icon">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
+    <header
+      class="bg-[url('../img/hero-bg.jpeg')] xl:h-[calc(100lvh+70px)] max-md:bg-cover max-md:bg-center flex flex-col relative"
+    >
+      <div
+        class="w-full h-full absolute left-0 top-0 z-0 bg-gradient-to-b from-[#3A3A3A] to-primary-black opacity-65"
+      ></div>
+      <nav class="w-full z-20 relative">
+        <div class="container flex items-center max-xl:pt-[25px]">
+          <div
+            class="basis-1/6 text-white drop-shadow-[0_4px_2px_rgba(0,0,0,0.35)] xl:mt-[34px] tracking-wider"
+          >
+            <span role="button"
+              ><span class="text-[40px] font-normal tracking-[0.1px]"
+                >Bookme</span
+              ><span class="text-[40px]">.</span
+              ><span class="text-[19px] font-light">com</span></span
+            >
+          </div>
+          <div class="basis-5/6 max-xl:mobile-menu flex">
+            <div
+              class="basis-4/5 max-xl:basis-0 flex items-stretch justify-center header-wavy-edge"
+            >
+              <img src="img/wave-top.svg" alt="wave" />
+              <div class="menu">
+                <a href="javascript:void(0)" title="List your property"
+                  >List your property</a
+                >
+                <a href="javascript:void(0)" title="Support">Support</a>
+                <a href="javascript:void(0)" title="Trips">Trips</a>
+                <a href="javascript:void(0)" title="Sign in">Sign in</a>
+              </div>
+              <img
+                class="-scale-x-100 -z-10"
+                src="img/wave-top.svg"
+                alt="wave"
+              />
             </div>
-        </nav>
-        <div class="relative text-white z-10 h-full flex items-center pt-[50px] xl:pt-2 pb-[120px] xl:pb-[50px]">
-            <div class="container">
-                <h1 class="font-medium text-[70px] md:text-[80px] wh-3xl:text-[90px] 3xl:text-[90px] wh-xl2:text-[112px] 4xl:text-[112px] leading-[0.93] tracking-[0.1px] bg-clip-text text-transparent bg-gradient-to-r from-white via-33% to-secondary inline-block drop-shadow-[0_4px_2px_rgba(0,0,0,0.3)] pb-5">Explore your place <span class="lg:block">to stay</span></h1>
-                <form class="w-[1378px] max-w-full rounded-[30px] bg-[#1D1D1D]/60 
-                pt-[36px] pb-[35px] px-5 3xs:px-[30px] 2xs:px-10 3xl:ps-[55px] 3xl:pe-[50px] 
-                mt-5 xl:mt-6 mb-12 xl:mb-10 2xl:mb-12 wh-3xl:mb-[65px] 3xl:mb-[65px] wh-xl2:mb-[70px] 4xl:mb-[115px] ">
-                    <div class="flex flex-wrap xl:flex-nowrap xl:items-center gap-6">
-                        <div class="w-full xl:w-[33.858%]">
-                            <div class="flex relative">
-                                <img class="absolute top-[21px] left-5" src="img/search.svg" alt="Search Icon">
-                                <label class="sr-only" for="search">Search</label>
-                                <input class="w-full ps-[70px] pe-5 input" type="text" id="search" placeholder="Stavanger, Norway">
-                            </div>
-                        </div>
-                        <div class="w-full xl:w-[27.495%]">
-                            <div class="flex relative group-input">
-                                <img class="absolute top-[23px] left-[14px]" src="img/calendar.svg" alt="Calendar Icon">
-                                <label class="sr-only" for="checkin">Check in</label>
-                                <input id="checkin" class="w-full xs:w-1/2 3xl:w-2/3 input pt-[25px] pe-5 pb-[15px] ps-[70px] xl:ps-[62px] 3xl:ps-[58px] 3xl:indent-5" type="text" placeholder="Check in">
-                                <label class="sr-only" for="checkout">Check in</label>
-                                <input id="checkout" class="w-full xs:w-1/2 xl:w-[140px] 3xl:w-[167px] grow input pt-[24px] px-5 pb-[16px] 3xl:ps-[37px]" type="text" placeholder="Checkout">
-                            </div>
-                        </div>
-                        <div class="w-full md:w-[calc(50%-12px)] xl:w-[18.147%]">
-                            <div class="flex relative">
-                                <img class="absolute top-[26px] left-[20px]" src="img/people.svg" alt="Guest Icon">
-                                <label class="sr-only" for="guest">Guest</label>
-                                <select id="guest" class="w-full input cursor-pointer ps-[70px] appearance-none pt-[23px] pb-[17px]">
-                                    <option>Guests</option>
-                                </select>
-                                <img class="absolute top-[36px] right-[24px]" src="img/down.svg" alt="Down Icon">
-                            </div>
-                        </div>
-                        <div class="w-full md:w-[calc(50%-12px)] xl:w-[14.847%]">
-                            <label class="sr-only" for="submit">Check in</label>
-                            <input class="w-full bg-golden text-primary-black p-[21px] text-xl font-medium rounded-[12px] shadow-[inset_2px_0_4px_0_rgba(0,0,0,0.25),inset_-2px_4px_4px_0_rgba(0,0,0,0.7)]" type="submit" id="submit" value="Checkout">
-                        </div>
-                    </div>
-                </form>
-                <div class="inline-block 4xl:me-[120px] ps-[40px] xl:ps-0 md:float-end">
-                    <h3 class="relative md:w-[450px] 2xl:w-[500px] wh-xl2:w-[545px] 4xl:w-[545px] max-w-full before:absolute before:top-1/2 before:-translate-y-1/2 before:-left-[29px] before:w-1 before:h-[92%] before:rounded-full before:bg-golden text-[32px] wh-xl:text-[28px] wh-xl2:text-[36px] 4xl:text-[36px] font-semibold tracking-[0.6px] leading-[1.3] text-balance md:text-wrap">We provide a variety of the best lodging accommodations for those of you who need it.</h3>
-                    <p class="text-[18px] font-normal mt-[10px] tracking-[0.37px]">Don't worry about the quality of the service.</p>
-                </div>
+            <div class="basis-1/5 max-xl:basis-0 max-xl:text-center">
+              <a
+                class="group btn-goto max-xl:float-none max-xl:inline-flex"
+                href="https://www.upwork.com/freelancers/muhammadrussell"
+                target="_blank"
+                title="Go to Upwork Profile"
+              >
+                Get the app
+                <img src="img/download.svg" alt="Download Icon" />
+                <img
+                  class="absolute right-[13px] opacity-0 group-hover:opacity-100 transition-all-5ms"
+                  src="img/download-golden.svg"
+                  alt="Download Icon"
+                />
+              </a>
             </div>
+          </div>
+          <div
+            class="basis-5/6 hidden max-xl:flex justify-end container absolute left-0 right-0 z-20 transition-all-full mr-0 menu-trigger"
+          >
+            <div class="menu-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         </div>
+      </nav>
+      <div
+        class="relative text-white z-10 h-full flex items-center pt-[50px] xl:pt-2 pb-[120px] xl:pb-[50px]"
+      >
+        <div class="container">
+          <h1
+            class="font-medium text-[70px] md:text-[80px] wh-3xl:text-[90px] 3xl:text-[90px] wh-xl2:text-[112px] 4xl:text-[112px] leading-[0.93] tracking-[0.1px] bg-clip-text text-transparent bg-gradient-to-r from-white via-33% to-secondary inline-block drop-shadow-[0_4px_2px_rgba(0,0,0,0.3)] pb-5"
+          >
+            Explore your place <span class="lg:block">to stay</span>
+          </h1>
+          <form
+            class="w-[1378px] max-w-full rounded-[30px] bg-[#1D1D1D]/60 pt-[36px] pb-[35px] px-5 3xs:px-[30px] 2xs:px-10 3xl:ps-[55px] 3xl:pe-[50px] mt-5 xl:mt-6 mb-12 xl:mb-10 2xl:mb-12 wh-3xl:mb-[65px] 3xl:mb-[65px] wh-xl2:mb-[70px] 4xl:mb-[115px]"
+          >
+            <div class="flex flex-wrap xl:flex-nowrap xl:items-center gap-6">
+              <div class="w-full xl:w-[33.858%]">
+                <div class="flex relative">
+                  <img
+                    class="absolute top-[21px] left-5"
+                    src="img/search.svg"
+                    alt="Search Icon"
+                  />
+                  <label class="sr-only" for="search">Search</label>
+                  <input
+                    class="w-full ps-[70px] pe-5 input"
+                    type="text"
+                    id="search"
+                    placeholder="Stavanger, Norway"
+                  />
+                </div>
+              </div>
+              <div class="w-full xl:w-[27.495%]">
+                <div class="flex relative group-input">
+                  <img
+                    class="absolute top-[23px] left-[14px]"
+                    src="img/calendar.svg"
+                    alt="Calendar Icon"
+                  />
+                  <label class="sr-only" for="checkin">Check in</label>
+                  <input
+                    id="checkin"
+                    class="w-full xs:w-1/2 3xl:w-2/3 input pt-[25px] pe-5 pb-[15px] ps-[70px] xl:ps-[62px] 3xl:ps-[58px] 3xl:indent-5"
+                    type="text"
+                    placeholder="Check in"
+                  />
+                  <label class="sr-only" for="checkout">Check in</label>
+                  <input
+                    id="checkout"
+                    class="w-full xs:w-1/2 xl:w-[140px] 3xl:w-[167px] grow input pt-[24px] px-5 pb-[16px] 3xl:ps-[37px]"
+                    type="text"
+                    placeholder="Checkout"
+                  />
+                </div>
+              </div>
+              <div class="w-full md:w-[calc(50%-12px)] xl:w-[18.147%]">
+                <div class="flex relative">
+                  <img
+                    class="absolute top-[26px] left-[20px]"
+                    src="img/people.svg"
+                    alt="Guest Icon"
+                  />
+                  <label class="sr-only" for="guest">Guest</label>
+                  <select
+                    id="guest"
+                    class="w-full input cursor-pointer ps-[70px] appearance-none pt-[23px] pb-[17px]"
+                  >
+                    <option>Guests</option>
+                  </select>
+                  <img
+                    class="absolute top-[36px] right-[24px]"
+                    src="img/down.svg"
+                    alt="Down Icon"
+                  />
+                </div>
+              </div>
+              <div class="w-full md:w-[calc(50%-12px)] xl:w-[14.847%]">
+                <label class="sr-only" for="submit">Check in</label>
+                <input
+                  class="w-full bg-golden text-primary-black p-[21px] text-xl font-medium rounded-[12px] shadow-[inset_2px_0_4px_0_rgba(0,0,0,0.25),inset_-2px_4px_4px_0_rgba(0,0,0,0.7)]"
+                  type="submit"
+                  id="submit"
+                  value="Checkout"
+                />
+              </div>
+            </div>
+          </form>
+          <div
+            class="inline-block 4xl:me-[120px] ps-[40px] xl:ps-0 md:float-end"
+          >
+            <h3
+              class="relative md:w-[450px] 2xl:w-[500px] wh-xl2:w-[545px] 4xl:w-[545px] max-w-full before:absolute before:top-1/2 before:-translate-y-1/2 before:-left-[29px] before:w-1 before:h-[92%] before:rounded-full before:bg-golden text-[32px] wh-xl:text-[28px] wh-xl2:text-[36px] 4xl:text-[36px] font-semibold tracking-[0.6px] leading-[1.3] text-balance md:text-wrap"
+            >
+              We provide a variety of the best lodging accommodations for those
+              of you who need it.
+            </h3>
+            <p class="text-[18px] font-normal mt-[10px] tracking-[0.37px]">
+              Don't worry about the quality of the service.
+            </p>
+          </div>
+        </div>
+      </div>
     </header>
     <main class="relative z-10">
-        <section class="bg-secondary-bg">
-            <div class="container text-center">
-                <div class="inline-flex w-[1087px] max-w-full m-auto items-stretch justify-between -translate-y-[98%]">
-                    <img class="-me-[1px] w-[45px] 3xs:w-[60px] 2xs:w-[80px] xs:w-[100px] md:w-auto" src="img/wave-bottom.png" alt="Edge">
-                    <div class="grid bg-secondary-bg pt-5 xs:pt-[29px] w-full justify-center -mb-[10px] 3xs:mb-0">
-                        <div class="inline-flex !w-[210px] justify-between swiper-pagination-bullets hotel-pagination"></div>
-                    </div>
-                    <img class="-ms-[1px] -scale-x-100 -z-10 w-[45px] 3xs:w-[60px] 2xs:w-[80px] xs:w-[100px] md:w-auto" src="img/wave-bottom.png" alt="Edge">
-                </div>
-                <div class="relative px-10 3xs:px-[50px] lg:px-16 xl:px-10 4xl:px-0">
-                    <h2 class="gradient-text font-bold text-[40px] mt-[40px] xl:mt-[90px] mb-[50px] sm:mb-[69px] tracking-[0.1px] max-md:leading-[1.3] pr-px">Hotels in your area</h2>
-                    <div class="swiper hotel-carousel swiper-container relative w-[1580px] max-w-full">
-                        <div class="swiper-wrapper hotels mb-[80px] sm:mb-[136px]"></div>
-                    </div>
-                    <div>
-                        <button class="hotel-button-prev swiper-button left-0 4xl:left-[26px]">
-                            <img class="-scale-x-100" src="img/arrow.svg" alt="Arrow Icon">
-                        </button>
-                        <button class="hotel-button-next swiper-button right-0 4xl:right-[26px]">
-                            <img src="img/arrow.svg" alt="Arrow Icon">
-                        </button>
-                    </div>
-                </div>
+      <section class="bg-secondary-bg">
+        <div class="container text-center">
+          <div
+            class="inline-flex w-[1087px] max-w-full m-auto items-stretch justify-between -translate-y-[98%]"
+          >
+            <img
+              class="-me-[1px] w-[45px] 3xs:w-[60px] 2xs:w-[80px] xs:w-[100px] md:w-auto"
+              src="img/wave-bottom.png"
+              alt="Edge"
+            />
+            <div
+              class="grid bg-secondary-bg pt-5 xs:pt-[29px] w-full justify-center -mb-[10px] 3xs:mb-0"
+            >
+              <div
+                class="inline-flex !w-[210px] justify-between swiper-pagination-bullets hotel-pagination"
+              ></div>
             </div>
-        </section>
-        <section class="bg-primary-bg">
-            <div class="container py-20 xl:py-[142px] xl:pb-[145px]">
-                <div class="flex flex-col xl:flex-row items-center xl:justify-between gap-14 w-[1526px] max-w-full mx-auto 3xl:-translate-x-[1px] text-center text-white">
-                    <div class="w-[369px] max-w-full">
-                        <h2 class="text-[26px] md:text-3xl text-secondary-text leading-none font-bold mb-[20px] xl:mb-[37px] pe-[15px]">See it all</h2>
-                        <p class="text-xl leading-6 text-secondary font-light tracking-[0.2px]">From local hotels to global brands, discover millions of rooms all around the world.</p>
-                    </div>
-                    <div class="w-[369px] max-w-full">
-                        <h2 class="text-[26px] md:text-3xl text-secondary-text leading-none font-bold mb-[20px] xl:mb-[37px] pe-[1px]">Compare right here</h2>
-                        <p class="text-xl leading-6 text-secondary font-light tracking-[0.2px] ps-[1px]">No need to search anywhere else. The biggest names in travel are right here.</p>
-                    </div>
-                    <div class="w-[369px] max-w-full">
-                        <h2 class="text-[26px] md:text-3xl text-secondary-text leading-none font-bold mb-[20px] xl:mb-[37px] ps-[13px]">Get exclusive rates</h2>
-                        <p class="text-xl leading-6 text-secondary font-light tracking-[0.2px]">We‘ve special deals with the world's leading hotels and we these savings with you.</p>
-                    </div>
-                </div>
+            <img
+              class="-ms-[1px] -scale-x-100 -z-10 w-[45px] 3xs:w-[60px] 2xs:w-[80px] xs:w-[100px] md:w-auto"
+              src="img/wave-bottom.png"
+              alt="Edge"
+            />
+          </div>
+          <div class="relative px-10 3xs:px-[50px] lg:px-16 xl:px-10 4xl:px-0">
+            <h2
+              class="gradient-text font-bold text-[40px] mt-[40px] xl:mt-[90px] mb-[50px] sm:mb-[69px] tracking-[0.1px] max-md:leading-[1.3] pr-px"
+            >
+              Hotels in your area
+            </h2>
+            <div
+              class="swiper hotel-carousel swiper-container relative w-[1580px] max-w-full"
+            >
+              <div class="swiper-wrapper hotels mb-[80px] sm:mb-[136px]"></div>
             </div>
-        </section>
-        <section class="bg-secondary-bg relative z-10 pb-[16px] 3xs:pb-[11px] xs:pb-px">
-            <div class="container">
-                <div class="flex pt-[70px] xl:pt-[90px] 4xl:pt-[145px] pb-[40px] md:pb-[60px] lg:pb-[80px] 2xl:pb-[118px]">
-                    <div class="flex flex-col xl:flex-row 2xl:gap-[30px] 4xl:gap-0 md:px-[60px] lg:px-[80px] 4xl:px-[105px]">
-                        <div class="w-full xl:w-[calc(100%-370px)] 2xl:w-[calc(100%-430px)] 4xl:w-[calc(100%-518px)]">
-                            <h2 class="text-[42px] 2xs:text-[48px] 2xl:text-[54px] tracking-[0.1px] font-bold gradient-text mb-[14px] max-xl:leading-[1.2] text-pretty">Browse by property type</h2>
-                            <p class="text-[20px] xs:text-[22px] 2xl:text-[26px] 4xl:text-[30.5px] leading-[34px] xs:leading-[40px] 2xl:leading-[47px] tracking-[0.7px] font-medium text-pretty">you can easily browse and filter your search by property type. This feature allows you to select hotels or alternative options, such as hostels, vacation rentals, or bed and breakfasts, based on your preferences and specific needs for your stay.</p>
-                        </div>
-                        <div class="w-full xl:w-[370px] 2xl:w-[430px] 4xl:w-[518px] self-end text-[45px] 3xs:text-[50px] 2xs:text-[60px] md:text-[65px] 3xl:text-[75px] tracking-[2.2px] leading-[0.88] font-bold text-center xl:text-right text-inset-shadow opacity-85 mt-10 xl:mt-0 pb-[5px] 4xl:pe-[3px]">2018-2024</div>
-                    </div>
-                </div>
-                <div class="apartments-container text-center">
-                    <div class="relative mb-[12px] px-10 3xs:px-[50px] xl:px-16 4xl:px-0">
-                        <div class="swiper apartments-carousel swiper-container relative w-[1560px] max-w-full">
-                            <div class="swiper-wrapper apartments"></div>
-                        </div>
-                        <div>
-                            <button class="apartments-button-prev swiper-button left-0 4xl:left-5">
-                                <img class="-scale-x-100" src="img/arrow.svg" alt="Arrow Icon">
-                            </button>
-                            <button class="apartments-button-next swiper-button right-0 4xl:right-5">
-                                <img src="img/arrow.svg" alt="Arrow Icon">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="inline-flex w-[1087px] max-w-full m-auto items-stretch justify-between translate-y-[37px]">
-                        <img class="-me-[1px] w-[45px] 3xs:w-[60px] 2xs:w-[80px] xs:w-[100px] md:w-auto" src="img/wave-under.png" alt="Edge">
-                        <div class="inline-flex md:flex w-full bg-secondary-bg justify-center relative after:absolute after:w-full after:h-[10px] after:bottom-0 after:drop-shadow-[0_4px_4px_rgba(0,0,0,0.6)] after:bg-white after:-z-10 pb-[5px] 3xs:pb-[10px] xs:pb-[20px] md:pb-0">
-                            <div class="inline-flex !w-[210px] justify-between swiper-pagination-bullets apartments-pagination -translate-y-[15px] xs:-translate-y-[10px]"></div>
-                        </div>
-                        <img class="-ms-[1px] -scale-x-100 w-[45px] 3xs:w-[60px] 2xs:w-[80px] xs:w-[100px] md:w-auto" src="img/wave-under.png" alt="Edge">
-                    </div>
-                </div>
+            <div>
+              <button
+                class="hotel-button-prev swiper-button left-0 4xl:left-[26px]"
+              >
+                <img
+                  class="-scale-x-100"
+                  src="img/arrow.svg"
+                  alt="Arrow Icon"
+                />
+              </button>
+              <button
+                class="hotel-button-next swiper-button right-0 4xl:right-[26px]"
+              >
+                <img src="img/arrow.svg" alt="Arrow Icon" />
+              </button>
             </div>
-        </section>
-        <section class="bg-primary pt-[100px] xl:pt-[140px] 2xl:pt-[196px] pb-[100px] xl:pb-[115px] drop-shadow-[0_4px_2px_rgba(0,0,0,0.3)]">
-            <div class="container flex justify-center">
-                <div class="flex w-[1540px] max-w-full flex-col xl:flex-row">
-                    <div class="w-full xl:w-[calc(100%-507px)] xl:pt-[71px] xl:ps-[10px] mb-16 xl:mb-0">
-                        <div class="xl:w-[717px] max-w-full">
-                            <h2 class="text-[40px] text-white tracking-[0.1px] font-bold">Stay in the know</h2>
-                            <p class="text-secondary text-[30px] tracking-[0.1px] leading-[1.2] mt-[20px] mb-10 xl:mb-20 xl:pe-[50px] text-balance xl:text-wrap">Sign up to get marketing emails from Bookme.com,including promotions, rewards, travel experiences,and information about Bookme.com and Booking.com Transport Limited’s products and services.</p>
-                            <form class="xl:pe-[50px] 2xl:pe-0">
-                                <div class="flex gap-[7px] flex-col xs:flex-row">
-                                    <label class="sr-only" for="email">Your email address</label>
-                                    <input class="input w-full bg-white placeholder:text-[#6C6C6C] text-primary-black px-[28px] leading-none pb-[22px] text-[22px]" id="email" type="email" placeholder="Your email address"> 
-                                    <input class="bg-golden text-primary-black ps-[51px] pe-[50px] py-[21px] xs:py-0 text-xl font-medium rounded-[12px] shadow-[inset_2px_0_4px_0_rgba(0,0,0,0.25)] tracking-[0.1px]" type="submit" value="Subscribe">
-                                </div>
-                                <p class="text-golden-light text-lg leading-none font-light tracking-[0.28px] mt-[10px] ps-[6px]">You can opt out anytime. See our <a class="underline decoration-golden text-golden underline-offset-[3px]" href="javascript:void();" title="see our privacy statement">privacy statement.</a></p>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="w-full xl:w-[507px] pt-16 xl:pt-0 xl:ps-[45px] bar">
-                        <div class="mb-[50px] xl:mb-[72px] ps-[6px] text-center xl:text-left">
-                            <h2 class="font-bold text-[40px] tracking-[0.1px] leading-[1.3] text-white">Trending destinations</h2>
-                            <p class="text-secondary text-lg leading-none tracking-[0.37px] ps-[6px] text-pretty">Most popular choices for travelers from Iran</p>
-                        </div>
-                        <div class="flex flex-col lg:flex-row xl:flex-col justify-center xl:justify-normal gap-[15px]">
-                            <div class="flex gap-[15px] xl:gap-5">
-                                <div class="w-full xs:w-1/2 xl:w-[242px] flex flex-col gap-[15px]">
-                                    <div class="w-full h-1/2 xl:h-auto destination" role="button">
-                                        <img class="h-full xl:h-auto" src="img/destination1.jpg" alt="Dubai">
-                                        <span>Dubai</span>
-                                    </div>
-                                    <div class="w-full h-1/2 xl:h-auto destination 3xl:translate-x-[1px]" role="button">
-                                        <img class="h-full xl:h-auto" src="img/destination3.jpg" alt="Tbilisi">
-                                        <span>Tbilisi</span>
-                                    </div>
-                                </div>
-                                <div class="w-full xs:w-1/2 lg:w-[300px] xl:w-[200px] destination 3xl:translate-y-[1px]" role="button">
-                                    <img class="h-full xl:h-auto" src="img/destination2.jpg" alt="Paris">
-                                    <span>Paris</span>
-                                </div>
-                            </div>
-                            <div class="flex gap-[15px] xl:gap-[9px] lg:flex-col xl:flex-row">
-                                <div class="w-full xs:w-1/2 lg:w-[300px] xl:w-[222px] lg:h-1/2 xl:h-auto destination" role="button">
-                                    <img class="h-full xl:h-auto" src="img/destination4.jpg" alt="Istanbul">
-                                    <span>Istanbul</span>
-                                </div>
-                                <div class="w-full xs:w-1/2 lg:w-[300px] xl:w-[231px] lg:h-1/2 xl:h-auto destination" role="button">
-                                    <img class="h-full xl:h-auto" src="img/destination5.jpg" alt="Taiwan">
-                                    <span>Taiwan</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="bg-primary-bg text-white pt-[60px] lg:pt-[76px] pb-[70px] 2xl:pb-[152px]">
-        <div class="container w-[1500px] max-w-full">
-            <div class="flex justify-between items-center flex-col lg:flex-row gap-7 lg:gap-0 pb-[70px] sm:pb-[60px] lg:pb-[47px] 5xl:px-[7px] border-b border-solid border-b-golden-light/15">
-                <div class="text-[40px] font-normal tracking-[0.1px] [word-spacing:2px] pt-[5px]">Bookme. <span class="inline-block text-[20px] font-light tracking-[0.5px]">com</span></div>
-                <div class="flex items-center flex-col xs:flex-row gap-5 xs:gap-5 md:gap-[52px]">
-                    <p class="text-[22px] font-light 3xl:pb-3 -tracking-[0.1px]">Ready to get started?</p>
-                    <input class="bg-golden text-primary-black py-[24px] ps-[67px] pe-[69px] text-xl font-medium rounded-[12px] -tracking-[0.2px]" type="button" value="Get started">
-                </div>
-            </div>
-            <div class="flex flex-wrap md:flex-nowrap gap-9 2xs:gap-0 md:gap-10 xl:gap-0 pt-[36px] pb-[49px] 
-            mt-[20px] mb-[40px] lg:mt-[76px] lg:mb-[107px] wh-xl:mt-[65px] wh-xl:mb-[70px] text-center 2xs:text-left">
-                <div class="w-full md:w-[520px] max-w-full 2xs:mb-9 md:mb-0">
-                    <p class="text-[22px] mb-[15px] md:mb-[45px] leading-[1.2] -tracking-[0.1px] font-light">Subscribe to our <span class="block">newsletter</span></p>
-                    <form class="flex md:inline-flex relative border-b border-b-golden-light/15">
-                        <input class="w-full md:w-[320px] focus:outline-none bg-transparent text-white text-[20px] pt-5 pe-5 placeholder:text-transparent peer" id="newsletter-email" type="email" placeholder="Email address" value="">
-                        <label class="absolute text-white/50 font-light top-2 text-[14px] peer-placeholder-shown:top-[21px] peer-placeholder-shown:text-[15px] peer-focus:top-2 peer-focus:text-[14px] transition-all-3ms" for="newsletter-email">Email address</label>
-                        <button class="bg-golden px-[29px] py-[30px] rounded-t-[8px] text-primary-black" type="submit">
-                            <img src="img/right.svg" alt=">">
-                        </button>
-                    </form>
-                </div>
-                <div class="w-full 2xs:w-1/3 md:w-[372px] max-w-full">
-                    <ul class="footer-menu">
-                        <li class="text-golden">Services</li>
-                        <li><a href="javascript:void();" title="Page link">Email Marketing</a></li>
-                        <li><a href="javascript:void();" title="Page link">Campaigns</a></li>
-                        <li><a href="javascript:void();" title="Page link">Branding</a></li>
-                        <li><a href="javascript:void();" title="Page link">Offline</a></li>
-                    </ul>
-                </div>
-                <div class="w-full 2xs:w-1/3 md:w-[324px] max-w-full">
-                    <ul class="footer-menu">
-                        <li class="text-golden">About</li>
-                        <li><a href="javascript:void();" title="Page link">Our Story</a></li>
-                        <li><a href="javascript:void();" title="Page link">Benefits</a></li>
-                        <li><a href="javascript:void();" title="Page link">Team</a></li>
-                        <li><a href="javascript:void();" title="Page link">Careers</a></li>
-                    </ul>
-                </div>
-                <div class="w-full 2xs:w-1/3 md:w-[219px] max-w-full">
-                    <ul class="footer-menu">
-                        <li class="text-golden">Help</li>
-                        <li class="-mt-[6px]"><a href="javascript:void();" title="Page link">FAQs</a></li>
-                        <li class="-mt-[6px]"><a href="javascript:void();" title="Page link">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="flex flex-col xs:flex-row justify-between items-center gap-8 xs:gap-8 md:gap-0">
-                <div class="flex gap-8 lg:gap-[115px] text-[15px] text-white/80 -tracking-[0.2px]">
-                    <a class="transition-all-3ms hover:text-golden-light" href="javascript:void();" title="Link">Terms & Conditions</a>
-                    <a class="transition-all-3ms hover:text-golden-light" href="javascript:void();" title="Link">Privacy Policy</a>
-                </div>
-                <div class="flex items-center gap-8 md:gap-[62px] 5xl:translate-x-[5px]">
-                    <a class="relative group" href="javascript:void();" title="Social Link">
-                        <img src="img/facebook.svg" alt="facebook icon">
-                        <img class="absolute top-0 group-hover:opacity-100 opacity-0 transition-all-5ms" src="img/facebook-golden.svg" alt="facebook icon">
-                    </a>
-                    <a class="relative group" href="javascript:void();" title="Social Link">
-                        <img src="img/twitter.svg" alt="x icon">
-                        <img class="absolute top-0 group-hover:opacity-100 opacity-0 transition-all-5ms" src="img/twitter-golden.svg" alt="x icon">
-                    </a>
-                    <a class="relative group" href="javascript:void();" title="Social Link">
-                        <img src="img/instagram.svg" alt="instagram icon">
-                        <img class="absolute top-0 group-hover:opacity-100 opacity-0 transition-all-5ms" src="img/instagram-golden.svg" alt="instagram icon">
-                    </a>
-                </div>
-            </div>
+          </div>
         </div>
+      </section>
+      <section class="bg-primary-bg">
+        <div class="container py-20 xl:py-[142px] xl:pb-[145px]">
+          <div
+            class="flex flex-col xl:flex-row items-center xl:justify-between gap-14 w-[1526px] max-w-full mx-auto 3xl:-translate-x-[1px] text-center text-white"
+          >
+            <div class="w-[369px] max-w-full">
+              <h2
+                class="text-[26px] md:text-3xl text-secondary-text leading-none font-bold mb-[20px] xl:mb-[37px] pe-[15px]"
+              >
+                See it all
+              </h2>
+              <p
+                class="text-xl leading-6 text-secondary font-light tracking-[0.2px]"
+              >
+                From local hotels to global brands, discover millions of rooms
+                all around the world.
+              </p>
+            </div>
+            <div class="w-[369px] max-w-full">
+              <h2
+                class="text-[26px] md:text-3xl text-secondary-text leading-none font-bold mb-[20px] xl:mb-[37px] pe-[1px]"
+              >
+                Compare right here
+              </h2>
+              <p
+                class="text-xl leading-6 text-secondary font-light tracking-[0.2px] ps-[1px]"
+              >
+                No need to search anywhere else. The biggest names in travel are
+                right here.
+              </p>
+            </div>
+            <div class="w-[369px] max-w-full">
+              <h2
+                class="text-[26px] md:text-3xl text-secondary-text leading-none font-bold mb-[20px] xl:mb-[37px] ps-[13px]"
+              >
+                Get exclusive rates
+              </h2>
+              <p
+                class="text-xl leading-6 text-secondary font-light tracking-[0.2px]"
+              >
+                We‘ve special deals with the world's leading hotels and we these
+                savings with you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="bg-secondary-bg relative z-10 pb-[16px] 3xs:pb-[11px] xs:pb-px"
+      >
+        <div class="container">
+          <div
+            class="flex pt-[70px] xl:pt-[90px] 4xl:pt-[145px] pb-[40px] md:pb-[60px] lg:pb-[80px] 2xl:pb-[118px]"
+          >
+            <div
+              class="flex flex-col xl:flex-row 2xl:gap-[30px] 4xl:gap-0 md:px-[60px] lg:px-[80px] 4xl:px-[105px]"
+            >
+              <div
+                class="w-full xl:w-[calc(100%-370px)] 2xl:w-[calc(100%-430px)] 4xl:w-[calc(100%-518px)]"
+              >
+                <h2
+                  class="text-[42px] 2xs:text-[48px] 2xl:text-[54px] tracking-[0.1px] font-bold gradient-text mb-[14px] max-xl:leading-[1.2] text-pretty"
+                >
+                  Browse by property type
+                </h2>
+                <p
+                  class="text-[20px] xs:text-[22px] 2xl:text-[26px] 4xl:text-[30.5px] leading-[34px] xs:leading-[40px] 2xl:leading-[47px] tracking-[0.7px] font-medium text-pretty"
+                >
+                  you can easily browse and filter your search by property type.
+                  This feature allows you to select hotels or alternative
+                  options, such as hostels, vacation rentals, or bed and
+                  breakfasts, based on your preferences and specific needs for
+                  your stay.
+                </p>
+              </div>
+              <div
+                class="w-full xl:w-[370px] 2xl:w-[430px] 4xl:w-[518px] self-end text-[45px] 3xs:text-[50px] 2xs:text-[60px] md:text-[65px] 3xl:text-[75px] tracking-[2.2px] leading-[0.88] font-bold text-center xl:text-right text-inset-shadow opacity-85 mt-10 xl:mt-0 pb-[5px] 4xl:pe-[3px]"
+              >
+                2018-2024
+              </div>
+            </div>
+          </div>
+          <div class="apartments-container text-center">
+            <div
+              class="relative mb-[12px] px-10 3xs:px-[50px] xl:px-16 4xl:px-0"
+            >
+              <div
+                class="swiper apartments-carousel swiper-container relative w-[1560px] max-w-full"
+              >
+                <div class="swiper-wrapper apartments"></div>
+              </div>
+              <div>
+                <button
+                  class="apartments-button-prev swiper-button left-0 4xl:left-5"
+                >
+                  <img
+                    class="-scale-x-100"
+                    src="img/arrow.svg"
+                    alt="Arrow Icon"
+                  />
+                </button>
+                <button
+                  class="apartments-button-next swiper-button right-0 4xl:right-5"
+                >
+                  <img src="img/arrow.svg" alt="Arrow Icon" />
+                </button>
+              </div>
+            </div>
+            <div
+              class="inline-flex w-[1087px] max-w-full m-auto items-stretch justify-between translate-y-[37px]"
+            >
+              <img
+                class="-me-[1px] w-[45px] 3xs:w-[60px] 2xs:w-[80px] xs:w-[100px] md:w-auto"
+                src="img/wave-under.png"
+                alt="Edge"
+              />
+              <div
+                class="inline-flex md:flex w-full bg-secondary-bg justify-center relative after:absolute after:w-full after:h-[10px] after:bottom-0 after:drop-shadow-[0_4px_4px_rgba(0,0,0,0.6)] after:bg-white after:-z-10 pb-[5px] 3xs:pb-[10px] xs:pb-[20px] md:pb-0"
+              >
+                <div
+                  class="inline-flex !w-[210px] justify-between swiper-pagination-bullets apartments-pagination -translate-y-[15px] xs:-translate-y-[10px]"
+                ></div>
+              </div>
+              <img
+                class="-ms-[1px] -scale-x-100 w-[45px] 3xs:w-[60px] 2xs:w-[80px] xs:w-[100px] md:w-auto"
+                src="img/wave-under.png"
+                alt="Edge"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="bg-primary pt-[100px] xl:pt-[140px] 2xl:pt-[196px] pb-[100px] xl:pb-[115px] drop-shadow-[0_4px_2px_rgba(0,0,0,0.3)]"
+      >
+        <div class="container flex justify-center">
+          <div class="flex w-[1540px] max-w-full flex-col xl:flex-row">
+            <div
+              class="w-full xl:w-[calc(100%-507px)] xl:pt-[71px] xl:ps-[10px] mb-16 xl:mb-0"
+            >
+              <div class="xl:w-[717px] max-w-full">
+                <h2 class="text-[40px] text-white tracking-[0.1px] font-bold">
+                  Stay in the know
+                </h2>
+                <p
+                  class="text-secondary text-[30px] tracking-[0.1px] leading-[1.2] mt-[20px] mb-10 xl:mb-20 xl:pe-[50px] text-balance xl:text-wrap"
+                >
+                  Sign up to get marketing emails from Bookme.com,including
+                  promotions, rewards, travel experiences,and information about
+                  Bookme.com and Booking.com Transport Limited’s products and
+                  services.
+                </p>
+                <form class="xl:pe-[50px] 2xl:pe-0">
+                  <div class="flex gap-[7px] flex-col xs:flex-row">
+                    <label class="sr-only" for="email"
+                      >Your email address</label
+                    >
+                    <input
+                      class="input w-full bg-white placeholder:text-[#6C6C6C] text-primary-black px-[28px] leading-none pb-[22px] text-[22px]"
+                      id="email"
+                      type="email"
+                      placeholder="Your email address"
+                    />
+                    <input
+                      class="bg-golden text-primary-black ps-[51px] pe-[50px] py-[21px] xs:py-0 text-xl font-medium rounded-[12px] shadow-[inset_2px_0_4px_0_rgba(0,0,0,0.25)] tracking-[0.1px]"
+                      type="submit"
+                      value="Subscribe"
+                    />
+                  </div>
+                  <p
+                    class="text-golden-light text-lg leading-none font-light tracking-[0.28px] mt-[10px] ps-[6px]"
+                  >
+                    You can opt out anytime. See our
+                    <a
+                      class="underline decoration-golden text-golden underline-offset-[3px]"
+                      href="javascript:void();"
+                      title="see our privacy statement"
+                      >privacy statement.</a
+                    >
+                  </p>
+                </form>
+              </div>
+            </div>
+            <div class="w-full xl:w-[507px] pt-16 xl:pt-0 xl:ps-[45px] bar">
+              <div
+                class="mb-[50px] xl:mb-[72px] ps-[6px] text-center xl:text-left"
+              >
+                <h2
+                  class="font-bold text-[40px] tracking-[0.1px] leading-[1.3] text-white"
+                >
+                  Trending destinations
+                </h2>
+                <p
+                  class="text-secondary text-lg leading-none tracking-[0.37px] ps-[6px] text-pretty"
+                >
+                  Most popular choices for travelers from Iran
+                </p>
+              </div>
+              <div
+                class="flex flex-col lg:flex-row xl:flex-col justify-center xl:justify-normal gap-[15px]"
+              >
+                <div class="flex gap-[15px] xl:gap-5">
+                  <div
+                    class="w-full xs:w-1/2 xl:w-[242px] flex flex-col gap-[15px]"
+                  >
+                    <div
+                      class="w-full h-1/2 xl:h-auto destination"
+                      role="button"
+                    >
+                      <img
+                        class="h-full xl:h-auto"
+                        src="img/destination1.jpg"
+                        alt="Dubai"
+                      />
+                      <span>Dubai</span>
+                    </div>
+                    <div
+                      class="w-full h-1/2 xl:h-auto destination 3xl:translate-x-[1px]"
+                      role="button"
+                    >
+                      <img
+                        class="h-full xl:h-auto"
+                        src="img/destination3.jpg"
+                        alt="Tbilisi"
+                      />
+                      <span>Tbilisi</span>
+                    </div>
+                  </div>
+                  <div
+                    class="w-full xs:w-1/2 lg:w-[300px] xl:w-[200px] destination 3xl:translate-y-[1px]"
+                    role="button"
+                  >
+                    <img
+                      class="h-full xl:h-auto"
+                      src="img/destination2.jpg"
+                      alt="Paris"
+                    />
+                    <span>Paris</span>
+                  </div>
+                </div>
+                <div
+                  class="flex gap-[15px] xl:gap-[9px] lg:flex-col xl:flex-row"
+                >
+                  <div
+                    class="w-full xs:w-1/2 lg:w-[300px] xl:w-[222px] lg:h-1/2 xl:h-auto destination"
+                    role="button"
+                  >
+                    <img
+                      class="h-full xl:h-auto"
+                      src="img/destination4.jpg"
+                      alt="Istanbul"
+                    />
+                    <span>Istanbul</span>
+                  </div>
+                  <div
+                    class="w-full xs:w-1/2 lg:w-[300px] xl:w-[231px] lg:h-1/2 xl:h-auto destination"
+                    role="button"
+                  >
+                    <img
+                      class="h-full xl:h-auto"
+                      src="img/destination5.jpg"
+                      alt="Taiwan"
+                    />
+                    <span>Taiwan</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-primary-bg text-white pt-[60px] lg:pt-[76px] pb-[70px] 2xl:pb-[152px]"
+    >
+      <div class="container w-[1500px] max-w-full">
+        <div
+          class="flex justify-between items-center flex-col lg:flex-row gap-7 lg:gap-0 pb-[70px] sm:pb-[60px] lg:pb-[47px] 5xl:px-[7px] border-b border-solid border-b-golden-light/15"
+        >
+          <div
+            class="text-[40px] font-normal tracking-[0.1px] [word-spacing:2px] pt-[5px]"
+          >
+            Bookme.
+            <span class="inline-block text-[20px] font-light tracking-[0.5px]"
+              >com</span
+            >
+          </div>
+          <div
+            class="flex items-center flex-col xs:flex-row gap-5 xs:gap-5 md:gap-[52px]"
+          >
+            <p class="text-[22px] font-light 3xl:pb-3 -tracking-[0.1px]">
+              Ready to get started?
+            </p>
+            <input
+              class="bg-golden text-primary-black py-[24px] ps-[67px] pe-[69px] text-xl font-medium rounded-[12px] -tracking-[0.2px]"
+              type="button"
+              value="Get started"
+            />
+          </div>
+        </div>
+        <div
+          class="flex flex-wrap md:flex-nowrap gap-9 2xs:gap-0 md:gap-10 xl:gap-0 pt-[36px] pb-[49px] mt-[20px] mb-[40px] lg:mt-[76px] lg:mb-[107px] wh-xl:mt-[65px] wh-xl:mb-[70px] text-center 2xs:text-left"
+        >
+          <div class="w-full md:w-[520px] max-w-full 2xs:mb-9 md:mb-0">
+            <p
+              class="text-[22px] mb-[15px] md:mb-[45px] leading-[1.2] -tracking-[0.1px] font-light"
+            >
+              Subscribe to our <span class="block">newsletter</span>
+            </p>
+            <form
+              class="flex md:inline-flex relative border-b border-b-golden-light/15"
+            >
+              <input
+                class="w-full md:w-[320px] focus:outline-none bg-transparent text-white text-[20px] pt-5 pe-5 placeholder:text-transparent peer"
+                id="newsletter-email"
+                type="email"
+                placeholder="Email address"
+                value=""
+              />
+              <label
+                class="absolute text-white/50 font-light top-2 text-[14px] peer-placeholder-shown:top-[21px] peer-placeholder-shown:text-[15px] peer-focus:top-2 peer-focus:text-[14px] transition-all-3ms"
+                for="newsletter-email"
+                >Email address</label
+              >
+              <button
+                class="bg-golden px-[29px] py-[30px] rounded-t-[8px] text-primary-black"
+                type="submit"
+              >
+                <img src="img/right.svg" alt=">" />
+              </button>
+            </form>
+          </div>
+          <div class="w-full 2xs:w-1/3 md:w-[372px] max-w-full">
+            <ul class="footer-menu">
+              <li class="text-golden">Services</li>
+              <li>
+                <a href="javascript:void();" title="Page link"
+                  >Email Marketing</a
+                >
+              </li>
+              <li>
+                <a href="javascript:void();" title="Page link">Campaigns</a>
+              </li>
+              <li>
+                <a href="javascript:void();" title="Page link">Branding</a>
+              </li>
+              <li>
+                <a href="javascript:void();" title="Page link">Offline</a>
+              </li>
+            </ul>
+          </div>
+          <div class="w-full 2xs:w-1/3 md:w-[324px] max-w-full">
+            <ul class="footer-menu">
+              <li class="text-golden">About</li>
+              <li>
+                <a href="javascript:void();" title="Page link">Our Story</a>
+              </li>
+              <li>
+                <a href="javascript:void();" title="Page link">Benefits</a>
+              </li>
+              <li><a href="javascript:void();" title="Page link">Team</a></li>
+              <li>
+                <a href="javascript:void();" title="Page link">Careers</a>
+              </li>
+            </ul>
+          </div>
+          <div class="w-full 2xs:w-1/3 md:w-[219px] max-w-full">
+            <ul class="footer-menu">
+              <li class="text-golden">Help</li>
+              <li class="-mt-[6px]">
+                <a href="javascript:void();" title="Page link">FAQs</a>
+              </li>
+              <li class="-mt-[6px]">
+                <a href="javascript:void();" title="Page link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="flex flex-col xs:flex-row justify-between items-center gap-8 xs:gap-8 md:gap-0"
+        >
+          <div
+            class="flex gap-8 lg:gap-[115px] text-[15px] text-white/80 -tracking-[0.2px]"
+          >
+            <a
+              class="transition-all-3ms hover:text-golden-light"
+              href="javascript:void();"
+              title="Link"
+              >Terms & Conditions</a
+            >
+            <a
+              class="transition-all-3ms hover:text-golden-light"
+              href="javascript:void();"
+              title="Link"
+              >Privacy Policy</a
+            >
+          </div>
+          <div
+            class="flex items-center gap-8 md:gap-[62px] 5xl:translate-x-[5px]"
+          >
+            <a
+              class="relative group"
+              href="javascript:void();"
+              title="Social Link"
+            >
+              <img src="img/facebook.svg" alt="facebook icon" />
+              <img
+                class="absolute top-0 group-hover:opacity-100 opacity-0 transition-all-5ms"
+                src="img/facebook-golden.svg"
+                alt="facebook icon"
+              />
+            </a>
+            <a
+              class="relative group"
+              href="javascript:void();"
+              title="Social Link"
+            >
+              <img src="img/twitter.svg" alt="x icon" />
+              <img
+                class="absolute top-0 group-hover:opacity-100 opacity-0 transition-all-5ms"
+                src="img/twitter-golden.svg"
+                alt="x icon"
+              />
+            </a>
+            <a
+              class="relative group"
+              href="javascript:void();"
+              title="Social Link"
+            >
+              <img src="img/instagram.svg" alt="instagram icon" />
+              <img
+                class="absolute top-0 group-hover:opacity-100 opacity-0 transition-all-5ms"
+                src="img/instagram-golden.svg"
+                alt="instagram icon"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
     <!-- <div class="relative">
         <span class="fixed top-0 w-[1px] h-screen side-shadow -translate-x-[1px]"></span>
         <span class="fixed top-0 right-0 w-[1px] h-screen side-shadow translate-x-[1px]"></span>
     </div> -->
     <div class="relative z-10 max-md:hidden">
-        <span class="fixed top-0 left-0 corner"></span>
-        <span class="fixed top-0 right-0 -scale-x-100 corner"></span>
-        <!-- <span class="absolute bottom-0 left-0 -rotate-90 corner bg-white"></span>
+      <span class="fixed top-0 left-0 corner"></span>
+      <span class="fixed top-0 right-0 -scale-x-100 corner"></span>
+      <!-- <span class="absolute bottom-0 left-0 -rotate-90 corner bg-white"></span>
         <span class="absolute bottom-0 right-0 -scale-x-100 rotate-90 corner bg-white"></span> -->
     </div>
     <script src="js/custom.js"></script>
-</body>
+  </body>
 </html>
